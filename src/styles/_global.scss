@@ -1,11 +1,11 @@
 /* Global styling for the layout */
 
-@import './_var.scss';
+@import "./_var.scss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -46,13 +46,36 @@ section {
 
 .fade-appear,
 .fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 500ms, transform 500ms;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 100ms, transform 300ms;
+}
+
+/* .fade-appear,
+.fade-enter {
     opacity: 0;
     z-index: 1;
 }
 .fade-appear-active,
 .fade-enter.fade-enter-active {
     opacity: 1;
-    transition: opacity 300ms linear 150ms;
+    transition: opacity 100ms linear 200ms;
 }
 
 .fade-exit {
@@ -61,5 +84,5 @@ section {
 
 .fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 150ms linear;
-}
+    transition: opacity 300ms linear;
+} */
