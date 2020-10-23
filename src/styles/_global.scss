@@ -1,6 +1,6 @@
 /* Global styling for the layout */
 
-@import './var.scss';
+@import './_var.scss';
 
 *{
     margin: 0;
@@ -35,8 +35,9 @@ body {
 section {
   width: 500px;
   height: 550px;
-  background-color: rgb(100, 153, 30);
+  background-color: $section-bg-color;
   margin: 50px auto 100px auto;
+  font-family: $text-font;
 }
 
 /* -----------------------------
